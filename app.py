@@ -6,7 +6,7 @@ import requests
 from io import BytesIO
 
 # Load model
-model = tf.keras.models.load_model("pred_gender_model_v1.keras")
+model = tf.keras.models.load_model("pred_gender_model_v1 (1).keras")
 
 # Fungsi prediksi
 def predict(image: Image.Image):
