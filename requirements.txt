@@ -1,8 +1,10 @@
-streamlit
-streamlit-webrtc
-tensorflow
-opencv-python-headless
+streamlit==1.33.0
+streamlit-webrtc==0.45.0
+tensorflow==2.12.0
+opencv-python-headless==4.5.5.64
 mediapipe==0.10.9
-numpy
-Pillow
-requests
+numpy==1.23.5
+Pillow==9.5.0
+requests==2.31.0
+protobuf==3.20.*
+absl-py==1.4.0
