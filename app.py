@@ -12,8 +12,12 @@ from streamlit_webrtc import webrtc_streamer, VideoTransformerBase
 model = tf.keras.models.load_model("pred_gender_model_v1.keras")
 
 # Setup Mediapipe
-mp_face_detection = mp.solutions.face_detection
-face_detector = mp_face_detection.FaceDetection(model_selection=0, min_detection_confidence=0.6)
+face_detector = mp.solutions.face_detection.FaceDetection(
+    model_selection=0,
+    min_detection_confidence=0.6,
+    static_image_mode=True  # Hindari GPU/GL context
+)
+
 
 st.set_page_config(page_title="Gender Detection", layout="centered")
 st.title("👁️ Gender Detection - Webcam | Upload | URL")
